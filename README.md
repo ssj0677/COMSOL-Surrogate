@@ -4,7 +4,7 @@ Code for physics-assisted surrogate modeling and dynamic optimization of seawate
 
 Pipeline: COMSOL simulations -> training data -> TFT surrogate model -> NSGA-II optimization of step-current protocols.
 
-Only the code is provided here. The COMSOL model (`.mph`), the simulation dataset and trained weights are not included.
+The repository holds the code and the COMSOL-generated datasets (`data/`). The COMSOL model (`.mph`) and trained weights are not included.
 
 ## Layout
 
@@ -21,7 +21,7 @@ Only the code is provided here. The COMSOL model (`.mph`), the simulation datase
 pip install -r requirements.txt
 ```
 
-Paths are relative to the repository root. Datasets are expected in `_E_<water>_<protocol>_v49/` folders under the root, and results are written to `_S_result/` and `_O_result/`. Set `SWB_MPH` to the COMSOL model file and `SWB_RESULT_DIR` to change the result folder.
+Paths are relative to the repository root. Training data are read from `_E_regrid/_E_seawater_<set>_v49_grid5/` under the root, and results are written to `_S_result/` and `_O_result/`. Set `SWB_MPH` to the COMSOL model file and `SWB_RESULT_DIR` to change the result folder.
 
 ## Usage
 
@@ -36,7 +36,7 @@ Each script's docstring (Korean) describes its inputs, outputs and options.
 
 ## Data
 
-The simulation dataset is not distributed with the code. Please contact the authors.
+The training data and result tables are in `data/` (see `data/README.md`). Unzip the four `_E_seawater_*_v49_grid5.zip` archives in the repository root before running the scripts in `2_surrogate/`. The `.mph` model and trained weights are not distributed; please contact the authors.
 
 ## License
 
