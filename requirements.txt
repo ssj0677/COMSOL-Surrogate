@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+scikit-learn
+xgboost
+torch
+pymoo==0.6.2
+matplotlib
+joblib
+# Data generation (1_extract) only; requires a COMSOL Multiphysics installation
+MPh
+JPype1

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.mph
+*.pt
+*.pkl
+*.npz
+*.log
+# COMSOL outputs, datasets and results are not tracked
+_E_*/
+_S_result/
+_O_result/
+cond_*.csv
+model/
